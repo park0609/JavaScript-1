@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자주쓰는 태그와 특징</title>
+</head>
+<a href="../index.html">메인으로 돌아가기</a><br />
+<body>
+    <div style="color:aqua; background-color: rgb(158, 110, 50);">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    </div>
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+     <!--div와 span의 차이점은 여백의 차이라고 보면 된다 div는 본인들끼리 연결시켜도 문장이 끝나는 칸 끝까지 여백을 먹고 한칸내려가 다음문장이
+     나오는 반면에 
+     span은 본인들끼리 연결시키면 문장끼리 합쳐진다 여백을 만들지 않고.스타일을 넣게되면 확연하게 확인이 가능하다 
+     div는 여백끝까지 backgroundcolor이 들어가는 반면 span은 본인 문장만 딱 색깔이 지정되고 다음 span은 색이 들어가지 않는다-->
+    <span style="background-color: blue;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> <!-- p는 div와 비슷하게 색이 들어간다-->
+    <p>
+        <a href="https://www.naver.com">네이버 바로가기</a>
+    </p>
+    <pre style="background-color: beige;"> <!-- 있는 그대로를 출력시킴 위에는 폰트도 적용되었지만 이건 진짜 그대로를 보여줌 스타일을 집어넣으면 문장이 있는 단과 여백까지 색이 들어간다-->
+Lorem                  ipsum 
+            dolor,<a href="http://210.119.14.56:3000">파일서버가기</a>               sit   amet 
+    consectetur
+              adipisicing elit.
+    </pre> <!-- pre는 있는그대로를 보여주긴 하지만 태그는 무조건 태그형식대로 보여준다.-->
+</body>
+</html>
