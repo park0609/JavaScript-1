@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        table {
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 2px solid #e97a7a;
+            padding: 10px 20px;
+            text-align: center;
+        }
+    
+    </style>
+    <a href="../index.html">메인으로 돌아가기</a>
+    <hr>
+</head>
+    <body>
+        <table>
+            <thead style="background-color: aqua;">
+                <tr>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                </tr>
+            </thead>
+            <tbody style="background-color:bisque;">
+                <tr>
+                    <td rowspan="2" style="padding: 0%;"><img src="../img/gukbob.jpg" alt="국밥" width="100"></td>
+                    <td><a href="#">간식</a></td>
+                    <td>간식2</td>
+                    <td rowspan="2">비빔밥</td>
+                    <td>간식3</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a href="#">라면</a></td>
+                    <td>볶음밥</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td>10000</td>
+                        <td colspan="2">6000</td>
+                        <td colspan="2">8000</td>
+                    </tr>
+                </tfoot>
+            </tbody>
+        </table>
+    </body>
+</html>
