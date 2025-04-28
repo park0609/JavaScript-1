@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <a href="../index.html">메인으로 돌아가기</a>
+    <hr>
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity=""
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+          />
+    <style>
+        li{
+            list-style-type: none;
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 0px 10px;  
+        /* padding은 인자를 최대 4개까지 받을수있는데 한개씩 늘어날 때마다 적용되는 파트가 달라진다고 보면 된다.
+            기본적으로  위 아래 좌 우 순서대로 적용이 되는데 
+            1개의 인자 : 5px -> 위아래좌우 전부 5px
+            2개의 인자 : 5px 10px -> 위아래 5px 좌우 10px
+            3개의 인자 : 5px 10px 15px -> 위 5px 아래 10px 좌우 15px
+            4개의 인자 : 5xp 10px 15px 20px -> 위 5px 아래 10xp 좌 15px 우 20px
+        */
+        }
+        a {
+            text-decoration: none;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <i class="fa-solid fa-house"></i>
+            <a href="#">메뉴1</a>
+        </li>
+        <li>
+            <i class="fa-solid fa-house"></i>
+            <a href="#">메뉴2</a>
+        </li>
+        <li>
+            <i class="fa-solid fa-image"></i>
+            <a href="#">메뉴3</a>
+        </li>
+    </ul>
+</body>
+</html>

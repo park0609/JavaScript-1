@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<a href="../index.html">메인으로 돌아가기</a>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        th,td{
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        thead, tfoot{
+            position: sticky;
+            color: #fff;
+            background-color: cadetblue;
+        }
+        .table-wrapper{
+            max-height: 200px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.table-wrapper>table>thead>th>th^^tbody>(tr>td*4)*10^^tfoot>tr>td*4 -->
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>나이</th>
+                    <th>직업</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>홍길동</td>
+                    <td>25</td>
+                    <td>개발자</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>이순신</td>
+                    <td>30</td>
+                    <td>군인</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>강감찬</td>
+                    <td>32</td>
+                    <td>설계자</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>허준</td>
+                    <td>41</td>
+                    <td>의사</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>마리오</td>
+                    <td>22</td>
+                    <td>탐험가</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>신짱구</td>
+                    <td>7</td>
+                    <td>유치원생</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>밥</td>
+                    <td>28</td>
+                    <td>농부</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>마동석</td>
+                    <td>38</td>
+                    <td>형사</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>박보검</td>
+                    <td>30</td>
+                    <td>배우</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>노진구</td>
+                    <td>15</td>
+                    <td>무직</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">테이블 풋터</td>
+                    
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

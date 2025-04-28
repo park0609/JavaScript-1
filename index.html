@@ -5,102 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>예제 요약 사이트</title>
     <style>
-        /* table{
-            border-collapse: collapse;
-            border: 0;
+        h1{
+            text-align: center;
+            background-color: beige;
+            width: 100%;
         }
-        tr,td {
-            border: 0;
-            ;
-        } */
+        td{
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+        thead{
+            border: 5px solid #000;
+        }
     </style>
 </head>
 <body>
-    <h1 style="background-color: bisque; text-align: center; height: 150%;">HTML 특강</h1>
+    <h1>HTML 특강</h1>
     <hr>
-    <table >
+    <table>
         <thead>
         <tr>
-            <td>1일차</td>
-            <td>2일차</td>
-            <td>3일차</td>
-            <td>4일차</td>
+            <th>1일차</th>
+            <th>2일차</th>
+            <th>3일차</th>
+            <th>4일차</th>
+            <th>5일차</th>
         </tr>
         </thead>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_01/ex01-1.html">예제 1</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-1.html">예제 1</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_03/ex03-1.html">예제 1</a><br /></td>
-            <td ></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-1.html">예제 1</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-1.html">예제 1</a><br /></td>
         </tr>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_01/ex01-2.html">예제 2</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-2.html">예제 2</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_03/ex03-2.html">예제 2</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-2.html">예제 2</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-2.html">예제 2</a><br /></td>
         </tr>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_01/ex01-3.html">예제 3</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-3.html">예제 3</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_03/ex03-3.html">예제 3</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-3.html">예제 3</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-3.html">예제 3</a><br /></td>
         </tr>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_01/ex01-4.html">예제 4</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-4.html">예제 4</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_03/ex03-4.html">예제 4</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-4.html">예제 4</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-4.html">예제 4</a><br /></td>
         </tr>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_01/ex01-5.html">예제 5</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-5.html">예제 5</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_03/ex03-1a.html">실습 1</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-5.html">예제 5</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-5.html">예제 5</a><br /></td>
         </tr>
         <tr>
-            <td><a href="http://127.0.0.1:5500/Day_01/ex01-8.html">예제 7</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_01/ex01-8.html">예제 6</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-6.html">예제 6</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_03/ex03-4a.html">과제 1</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-6.html">예제 6</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-6.html">예제 6</a><br /></td>
         </tr>
         <tr>
-            <td><a href="http://127.0.0.1:5500/Day_01/ex01-9.html">예제 8</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_01/ex01-9.html">예제 7</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-7.html">예제 7</a><br /></td>
-            <td rowspan="8" style="border: 0;"></td>
-            <td></td>
+            <td rowspan="14" style="border: 0;"></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-7.html">예제 7</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-7.html">예제 7</a><br /></td>
         </tr>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_01/ex01-7a.html">과제 1a</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-8.html">예제 8</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-8.html">예제 8</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-8.html">예제 8</a><br /></td>
         </tr>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_01/ex01-7b.html">과제 1b</a><br /></td>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-9.html">예제 9</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-9.html">예제 9</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-9.html">예제 9</a><br /></td>
         </tr>
         <tr>
-            <td rowspan="8" style="border: 0;"></td>
+            <td rowspan="11" style="border: 0;"></td>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-1a0.html">예제 1a0</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-10.html">예제 10</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-9a.html">예제 9a</a><br /></td>
         </tr>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-1a1.html">예제 1a1</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-6a.html">예제 6a</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-9b.html">예제 9b</a><br /></td>
         </tr>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-1a2.html">예제 1a2</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-6b.html">예제 6b</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-10.html">예제 10</a><br /></td>
         </tr>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-5a.html">과제 1</a><br /></td>
-            <td></td>
+            <td><a href="http://127.0.0.1:5500/Day_04/ex04-6c.html">예제 6c</a><br /></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-10a.html">예제 10a</a><br /></td>
         </tr>
         <tr>
             <td><a href="http://127.0.0.1:5500/Day_02/ex02-9a.html">과제 2</a><br /></td>
-            <td></td>
+            <td rowspan="7" style="border: 0;"></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-10.html">예제 10b</a><br /></td>
         </tr>
-
+        <tr>
+            <td rowspan="6" style="border: 0;"></td>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-11.html">예제 11</a><br /></td>
+        </tr>
+        <tr>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-11a.html">예제 11a</a><br /></td>
+        </tr>
+        <tr>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-12.html">예제 12</a><br /></td>
+        </tr>
+        <tr>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-13.html">예제 13</a><br /></td>
+        </tr>
+        <tr>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-13a.html">예제 13a</a><br /></td>
+        </tr>
+        <tr>
+            <td><a href="http://127.0.0.1:5500/Day_05/ex05-14.html">예제 14</a><br /></td>
+        </tr>
     </table>
 </body>
 </html>
