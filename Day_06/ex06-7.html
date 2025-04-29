@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="../index.html">메인으로 돌아가기</a>
+    <hr>
+    <title>Document</title>
+    <style>
+        p:nth-child(2){
+            color: red;
+        }
+        p:nth-last-child(2){
+            color:red;
+        }
+        p:nth-of-type(odd){
+            background-color: rgb(62, 189, 189);
+        }
+        p:nth-of-type(even){
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <!-- (div{여기는 세는 곳이 아님}+p{$번째 태그}*2)*3 -->
+    <div>여기는 세는 곳이 아님</div>
+    <p>1번째 태그</p>
+    <p>2번째 태그</p>
+    <div>여기는 세는 곳이 아님</div>
+    <p>3번째 태그</p>
+    <p>4번째 태그</p>
+    <div>여기는 세는 곳이 아님</div>
+    <p>5번째 태그</p>
+    <p>6번째 태그</p>
+</body>
+</html>

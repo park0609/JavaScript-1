@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>선형 그러데이션</title>
+  <a href="../index.html">메인으로 돌아가기</a>
+    <hr>
+  <style>
+	#div1 {
+		width:200px;
+		height:100px;
+		border-radius:10px;
+	}
+    .grad1{
+        /* background: blue; */
+        background: linear-gradient(to right bottom, blue, white);
+    }
+    .grad2{
+      background: linear-gradient(45deg, #f00, #fff);
+    }
+    .grad3{
+      background: linear-gradient(to bottom, #06f, white 30%, #06f);
+    }
+    .grad4{
+      background: radial-gradient(white, yellow, red);
+    }
+    .grad5{
+      background: radial-gradient(circle, white, yellow, red);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="grad1" id="div1"></div> <br>
+  <div class="grad2" id="div1"></div><br>
+  <div class="grad3" id="div1"></div><br>
+  <div class="grad4" id="div1"></div><br>
+  <div class="grad5" id="div1"></div>
+  
+
+</body>
+</html>

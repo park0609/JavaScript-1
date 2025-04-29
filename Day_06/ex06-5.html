@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="../index.html">메인으로 돌아가기</a>
+    <hr>
+    <title>Document</title>
+    <style>
+        :root{
+            --myred1:rgb(253, 31, 31);
+            --myred2:rgb(243, 155, 155);
+            --myred3:rgb(252, 208, 208);
+            --mygreen1:rgb(19, 250, 19);
+            --mygreen2:rgb(118, 250, 118);
+            --mygreen3:rgb(173, 248, 173);
+            --myblue1:rgb(12, 12, 255);
+            --myblue2:rgb(114, 114, 247);
+            --myblue3:rgb(169, 169, 238);
+            --mypink1: rgb(252, 80, 108);
+            --mypink2: rgb(250, 124, 145);
+            --mypink3: rgb(252, 183, 194);
+
+        }
+        header,
+        footer{
+            width: 300px;
+            height: 40px;
+            background-color: var(--myblue2);
+            border: 5px solid var(--myblue3);
+            box-sizing: border-box;
+        }
+        nav{
+            width: 50px;
+            height: 250px;
+            background-color: var(--mygreen2);
+            border: 5px solid var(--mygreen3);
+            box-sizing: border-box;
+            float: left;
+        }
+        main{
+            width: 250px;
+            box-sizing: border-box;
+            margin-left: 50px;
+        }
+        article{
+            height: 50px;
+            box-sizing: border-box;
+            background-color: var(--mypink2);
+            border: 5px solid var(--mypink3);
+        }
+        section{
+            height: 200px;
+            box-sizing: border-box;
+            background-color: var(--myred2);
+            border: 5px solid var(--myred3);
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box>header{header}+div>nav{nav}+main>article{article}+section{section}^^footer{footer} -->
+    <div class="box">
+        <header>header</header>
+        <div>
+            <nav>nav</nav>
+            <main>
+                <article>article</article>
+                <section>section</section>
+            </main>
+        </div>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
