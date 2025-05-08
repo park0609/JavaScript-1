@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button 
+            class="accordion-button" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#collapseOne" 
+            aria-expanded="true" 
+            aria-controls="collapseOne"
+            >
+              자바
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                자바는 객체 지향 프로그래밍을 기반으로 하는 언어로, 플랫폼 독립성을 지닌 것이 특징입니다. 
+                자바 가상 머신(JVM)을 통해 Windows, Linux, Mac 등 다양한 환경에서 실행 가능하며, 
+                기업용 애플리케이션, 모바일 앱(특히 Android 개발), 대규모 시스템에 많이 활용됩니다.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button 
+            class="accordion-button collapsed" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#collapseTwo" 
+            aria-expanded="false" 
+            aria-controls="collapseTwo"
+            >
+              파이썬
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                파이썬은 간결한 문법과 강력한 라이브러리를 갖춘 프로그래밍 언어로, 
+                데이터 분석, 머신러닝, 웹 개발, 자동화 등에 널리 사용됩니다. 인터프리터 방식으로 실행되며, 
+                다양한 운영 체제에서 동작하고 초보자도 쉽게 배울 수 있습니다.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button 
+            class="accordion-button collapsed" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#collapseThree" 
+            aria-expanded="false" 
+            aria-controls="collapseThree">
+              C
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                C언어 C언어는 시스템 프로그래밍 및 하드웨어 제어가 가능한 저수준 프로그래밍 언어입니다. 
+                높은 실행 속도를 자랑하며 운영 체제(OS), 임베디드 시스템, 게임 엔진 등의 개발에 자주 사용됩니다. 
+                메모리 관리가 필요하여 상대적으로 어렵지만, 컴퓨터 공학의 기초로 널리 학습됩니다.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="../img/cat1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="../img/cat1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>

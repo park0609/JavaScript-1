@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <a href="../index.html">메인으로 돌아가기</a>
+    <hr>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border-radius: 100%;
+            animation: move 5s infinite ease-in-out;
+        }
+
+        @keyframes move {
+            0%{
+                transform: translate(0);
+            }
+            45%{
+                transform: translate(0, 290px);
+            }
+            49%{
+                transform: translate(0,290px) scaleX(1.5);
+                
+            }
+            50%{
+                transform: translate(0,300px) scaleX(1.5);
+                
+            }
+            51%{
+                transform: translate(0, 290px) scaleX(1.5);
+            }
+            55%{
+                transform: translate(0, 290px);
+            }
+            100%{
+                transform: translate(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

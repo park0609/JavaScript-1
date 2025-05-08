@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <a href="../index.html">메인으로 돌아가기</a>
+    <hr>
+    <style>
+        .container{
+            width: 300px;
+            height: 400px;
+            border: 5px solid #000;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container > div{
+            background-color: #ccc;
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+        }
+        .container > div:nth-of-type(2)
+    ,   .container > div:nth-of-type(5){
+            align-self: flex-end; /* 여기서 self는 하나만 움직이게 만들고 end를 치면 뚝 떨어지는데 이유는 wrap으로 
+                                     설정이 되어 있다보니 격자무늬가 만들어짐 응용법*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
