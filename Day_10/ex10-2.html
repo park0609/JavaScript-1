@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        post-list{
+            width: 800px;
+            margin: auto;
+            position: relative;
+        }
+        .post{
+            background-color: aquamarine;
+            padding: 1.5rem;
+            margin-bottom: -75px;
+            border: 1px solid #000;
+            border-radius: 12px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            transition: 0.3s ease-in;
+        }
+        .post:hover{
+            transform: translateY(-20px);
+            z-index: 100;
+        }
+        .post p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.post-list>(div.post>h3{제목$}+p{내용$}+{2025년 5월 $일})*7 -->
+    <div class="post-list">
+        <div class="post">
+            <h3>미래 도시: 2050년 우리는 어디로 가는가?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, et?</p>
+            2025년 5월 1일
+        </div>
+        <div class="post">
+            <h3>커피 한 잔의 철학: 일상 속 작은 행복</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, saepe!</p>
+            2025년 5월 2일
+        </div>
+        <div class="post">
+            <h3>AI 시대의 직업 변화, 당신의 선택은?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, corporis.</p>
+            2025년 5월 3일
+        </div>
+        <div class="post">
+            <h3>여행이 삶에 미치는 놀라운 영향</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, enim.</p>
+            2025년 5월 4일
+        </div>
+        <div class="post">
+            <h3>혼자만의 시간, 진정한 힐링의 순간</h3>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, fuga!</p>
+            2025년 5월 5일
+        </div>
+        <div class="post">
+            <h3>과학과 예술, 그 아름다운 만남</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, officiis!</p>
+            2025년 5월 6일
+        </div>
+        <div class="post">
+            <h3>성공의 비밀: 꾸준함이 답이다</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, aliquam.</p>
+            2025년 5월 7일
+        </div>
+    </div>
+</body>
+</html>
