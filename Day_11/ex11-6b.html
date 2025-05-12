@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        table{
+            font-weight: bold;
+            border: 2px solid white;
+            text-align: center;
+            box-shadow:10px 10px 20px rgba(0,0,0,0.5);
+            margin: auto;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            
+        th{
+            background-color: #4fa5df;
+            color: white;
+        }
+        th, td {
+            width: 80px;
+            height: 40px;
+        }
+        tr:nth-of-type(even) td{
+            background-color: rgb(157, 233, 238);
+        }
+        tr:nth-of-type(odd) td{
+            background-color: rgb(250, 236, 226);
+        }
+    </style>
+     <script>
+        const list =
+        `<ul>
+        <li>Hello!</li>
+        <li>Javascript로 작성되었어</li>
+    </ul>
+    <h2>&& and 연산자</h2>
+    <table>
+         
+            <th>좌변</th>
+            <th>우변</th>
+            <th>결과</th>
+       
+            <tr>
+                <td>true</td>
+                <td>true</td>
+                <td>${true && true}</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>false</td>
+                <td>${true && false}</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>true</td>
+                <td>${false && true}</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>false</td>
+                <td>${false && false}</td>
+            </tr>
+        
+    </table>
+    
+    <h2>|| or 연산자</h2>
+    <table>
+        
+            <th>좌변</th>
+            <th>우변</th>
+            <th>결과</th>
+        
+            <tr>
+                <td>true</td>
+                <td>true</td>
+                <td>${true || true}</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>false</td>
+                <td>${true || false}</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>true</td>
+                <td>${false || true}</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>false</td>
+                <td>${false || false}</td>
+            </tr>
+        
+    </table>`;
+    document.write(list);
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

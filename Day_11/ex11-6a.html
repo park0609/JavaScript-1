@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYle>
+        table{
+            border-collapse: collapse;
+        }
+        tr,td{
+            border: 1px solid black;
+            background-color: antiquewhite;
+            padding: 5px;
+        }
+        tr:nth-of-type(even) td{
+            background-color: aliceblue;
+        }
+    </STYle>
+    <script>
+        const inp = prompt("원하는 값을 입력하세요.")
+        const list =
+    `<table>
+        <thead>
+            <th>${inp}단</th>
+        <tbody>
+            <tr>
+                <td>${inp} ✖️ 1 = ${inp*1}</td>
+            </tr>
+            <tr>
+                <td>${inp} ✖️ 2 = ${inp*2}</td>
+            </tr>
+            <tr>
+                <td>${inp} ✖️ 3 = ${inp*3}</td>
+            </tr>
+            <tr>
+                <td>${inp} ✖️ 4 = ${inp*4}</td>
+            </tr>
+            <tr>
+                <td>${inp} ✖️ 5 = ${inp*5}</td>
+            </tr>
+            <tr>
+                <td>${inp} ✖️ 6 = ${inp*6}</td>
+            </tr>
+            <tr>
+                <td>${inp} ✖️ 7 = ${inp*7}</td>
+            </tr>
+            <tr>
+                <td>${inp} ✖️ 8 = ${inp*8}</td>
+            </tr>
+            <tr>
+                <td>${inp} ✖️ 9 = ${inp*9}</td>
+            </tr>
+    </table>`;
+    document.write(list);
+</script>
+</head>
+<body>
+</body>
+</html>
