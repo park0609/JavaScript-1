@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            
+        }
+        table{
+            border-collapse: collapse;
+            
+        }
+        tr,td{
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+            
+        }
+        tr {
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        #pur{
+            background-color: plum;
+        }
+        #blue{
+            background-color: rgb(165, 165, 252);
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #ibo{
+            background-color: rgb(252, 252, 178);
+        }
+        #orange{
+            background-color: orangered;
+        }
+    </style>
+    
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <td colspan="6">16℃ 미만</td>
+            <td colspan="4">16℃이상 ~ 22℃미만</td>
+            <td colspan="4">22℃이상 ~ 28℃미만</td>
+            <td colspan="3">28℃이상 ~ 32미만</td>
+            <td colspan="7">32℃이상</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td id = "pur"></td>
+            <td id = "pur"></td>
+            <td id = "pur"></td>
+            <td id = "pur"></td>
+            <td id = "pur"></td>
+            <td id = "pur"></td>
+            <td id = "blue"></td>
+            <td id = "blue"></td>
+            <td id = "blue"></td>
+            <td id = "blue"></td>
+            <td id = "yellow"></td>
+            <td id = "yellow"></td>
+            <td id = "yellow"></td>
+            <td id = "yellow"></td>
+            <td id = "ibo"></td>
+            <td id = "ibo"></td>
+            <td id = "ibo"></td>
+            <td id = "orange"></td>
+            <td id = "orange"></td>
+            <td id = "orange"></td>
+            <td id = "orange"></td>
+            <td id = "orange"></td>
+            <td id = "orange"></td>
+        </tr>
+        <tr>
+            <td colspan="6"></td>
+            <td colspan="4"></td>
+            <td colspan="4"></td>
+            <td colspan="3"></td>
+            <td colspan="7">정상온도를 넘겼습니다</td>
+        </tr>
+    </tbody>
+    </table>
+    <script>
+        const temp = prompt("온도를 입력해주세요");
+        
+        if (temp >= 32) {
+            document.write(`<h3>지금 온도는 ${temp}이며, 상태는 정상온도를 넘겼습니다</h3>`);
+            
+        } else if (temp >= 28) {
+            const list = `지금 온도는 ${temp}이며, 상태는 갑갑하네요`;
+            document.body.innerHTML = list;
+        } else if (temp >= 22) {
+            const list = `지금 온도는 ${temp}이며, 상태는 보통이에요`;
+            document.body.innerHTML = list;
+        } else if (temp >= 16) {
+            const list = `지금 온도는 ${temp}이며, 상태는 시원하네요`;
+            document.body.innerHTML = list;
+        } else {
+            const list = `지금 온도는 ${temp}이며, 상태는 정상온도에서 이하로 벗어났습니다 `;
+            document.body.innerHTML = list;
+        };
+    </script>
+
+</body>
+</html>
+
