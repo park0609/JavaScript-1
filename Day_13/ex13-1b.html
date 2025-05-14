@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <style>
+        div{
+            padding: 0;
+            margin: 45%;
+            background: url(../img/가위바위보.jpg);
+            width: 110px;
+            height: 110px;
+        }
+        .zzi{
+            background-position: -170px 0;
+        }
+        .bba{
+            background-position: -83px 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const now = dayjs();
+        const random = now.get("ms") % 3;
+        console.log(random);
+        if (random == 2) {
+        document.body.innerHTML = `<div class = "bba"></div>`;
+        } else if (random == 1) {
+            document.body.innerHTML = `<div class = "zzi"></div>`;
+        } else {
+            document.body.innerHTML = `<div class = "muk"></div>`;
+        };
+    </script>
+</body>
+</html>

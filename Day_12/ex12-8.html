@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            
-        }
         table{
             border-collapse: collapse;
-            
         }
         tr,td{
             border: 1px solid black;
             width: 30px;
             height: 30px;
-            
         }
         tr {
             text-align: center;
@@ -38,6 +33,20 @@
         #orange{
             background-color: orangered;
         }
+        .rainbow-text {
+        animation: rainbow 2s infinite linear;
+        }
+
+        @keyframes rainbow {
+            0% { color: red; }
+            16% { color: orange; }
+            33% { color: yellow; }
+            50% { color: green; }
+            66% { color: blue; }
+            83% { color: indigo; }
+            100% { color: violet; }
+            }
+
     </style>
     
 </head>
@@ -91,21 +100,21 @@
         const temp = prompt("온도를 입력해주세요");
         
         if (temp >= 32) {
-            document.write(`<h3>지금 온도는 ${temp}이며, 상태는 정상온도를 넘겼습니다</h3>`);
+            document.write(`<h3 class="rainbow-text">지금 온도는 ${temp}이며, 상태는 정상온도를 넘겼습니다</h3>`);
             
         } else if (temp >= 28) {
-            const list = `지금 온도는 ${temp}이며, 상태는 갑갑하네요`;
-            document.body.innerHTML = list;
+            document.write(`<h3 class="rainbow-text">지금 온도는 ${temp}이며, 상태는 갑갑하네요</h3>`);
+            
         } else if (temp >= 22) {
-            const list = `지금 온도는 ${temp}이며, 상태는 보통이에요`;
-            document.body.innerHTML = list;
+            document.write(`<h3 class="rainbow-text">지금 온도는 ${temp}이며, 상태는 보통이에요</h3>`);
+            
         } else if (temp >= 16) {
-            const list = `지금 온도는 ${temp}이며, 상태는 시원하네요`;
-            document.body.innerHTML = list;
+            document.write(`<h3 class="rainbow-text">지금 온도는 ${temp}이며, 상태는 시원하네요</h3>`);
+            
         } else {
-            const list = `지금 온도는 ${temp}이며, 상태는 정상온도에서 이하로 벗어났습니다 `;
-            document.body.innerHTML = list;
-        };
+            document.write(`<h3 class="rainbow-text">지금 온도는 ${temp}이며, 상태는 정상온도에서 이하로 벗어났습니다</h3>`);
+            
+        }
     </script>
 
 </body>
