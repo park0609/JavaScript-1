@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let ran = Math.floor(Math.random()*100);
+        let str = 10000//+prompt("몇번 실행할까요?")
+        let arr = [0,0,0,0];
+        let arr1 = [];
+        let list = `<button onclick="location.reload(true)">새로고침</button>
+                    <button onclick="alert("네")">팝업</button>`;
+        let inp = 0;
+        let inp1 = 0;
+        let inp2 = 0;
+        let inp3 = 0;
+        for (let i = 0; i < str; i++) {
+            ran = Math.floor(Math.random()*100);
+            if (ran<3) {
+                inp += 1;
+                arr.splice(0,1,inp);
+            } else if (ran < 13) {
+                inp1 += 1;
+                arr.splice(1,1,inp1);
+            } else if (ran < 53) {
+                inp2 += 1;
+                arr.splice(2,1,inp2);
+            } else {
+                inp3 += 1;
+                arr.splice(3,1,inp3);
+            }
+        }
+        console.log(arr);
+        let uni = arr[0];
+        let rea = arr[1];
+        let mag = arr[2];
+        let nol = arr[3];
+        arr1.splice(0,1,uni/(str/100));
+        arr1.splice(1,1,rea/(str/100));
+        arr1.splice(2,1,mag/(str/100));
+        arr1.splice(3,1,nol/(str/100));
+        console.log(arr1);
+        
+        list +=`        <table border="1">`
+        list +=`        <tr>`
+        list +=`                <td>아이템</td>`
+        list +=`                <td>확률</td>`
+        list +=`                <td>갯수</td>`
+        list +=`                <td>검증</td>`
+        list +=`            </tr>`
+        list +=`            <tr>`
+        list +=`                <td>유니크</td>`
+        list +=`                <td>3%</td>`
+        list +=`                <td>${uni}</td>`
+        list +=`                <td>${uni/(str/100)}</td>`
+        list +=`            </tr>`
+        list +=`            <tr>`
+        list +=`                <td>레어</td>`
+        list +=`                <td>10%</td>`
+        list +=`                <td>${rea}</td>`
+        list +=`                <td>${rea/(str/100)}</td>`
+        list +=`            </tr>`
+        list +=`            <tr>`
+        list +=`                <td>매직</td>`
+        list +=`                <td>40%</td>`
+        list +=`                <td>${mag}</td>`
+        list +=`                <td>${mag/(str/100)}</td>`
+        list +=`            </tr>`
+        list +=`            <tr>`
+        list +=`                <td>일반</td>`
+        list +=`                <td>47%</td>`
+        list +=`                <td>${nol}</td>`
+        list +=`                <td>${nol/(str/100)}</td>`
+        list +=`            </tr>`
+        list +=`            <tr>`
+        list +=`                <td>검증</td>`
+        list +=`                <td>100%</td>`
+        list +=`                <td>${uni+rea+mag+nol}</td>`
+        list +=`                <td>${arr1[0] + arr1[1] + arr1[2] + arr1[3]}%</td>`
+        list +=`            </tr>`
+        list +=`        </table>`
+        document.body.innerHTML = list;
+    </script>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

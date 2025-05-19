@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [
+            "딸기",
+            "바나나",
+            "수박",
+            "참외",
+            "포도",
+            "멜론",
+            "키위",
+            "복숭아"
+        ];
+        console.log(arr);
+        const inp1 = prompt(`${arr} 중 제거하고 싶은 품목을 입력하세요.`);
+        const inp2 = prompt(`${arr}외에 추가하고 싶은 품목을 입력하세요`);
+        if (arr.indexOf(inp1) == -1 ) {
+            alert(`${inp1}은 존재하지 않은 품목입니다.`);
+        } else {
+            const inp1_1 = arr.indexOf(`${inp1}`);
+            const inp1_2 = arr.splice(inp1_1,1);
+            const inp2_1 = arr.push(`${inp2}`);
+            document.body.innerHTML = `제거 후 추가한 뒤 정리된 품목은 ${arr}입니다.`;
+        }
+    </script>
+</body>
+</html>

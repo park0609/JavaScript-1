@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr = [
+            '강아지',
+            '고양이',
+            '코끼리',
+            '원숭이',
+            '호랑이',
+            '거북이',
+            '토끼',
+            '여우',
+            '늑대'
+        ];
+        arr["나는 누구"] = "여긴어디";
+        console.log("arr길이 :", arr.length);
+        for (let i = 0; i < arr.length; i++ ){
+            console.log(i, arr[i]);
+        }
+
+        for (let i =arr.length-1; i >= 0; i--){
+            console.log("거꾸로: ",i,arr[i]);
+        }
+        
+        //쓰지마세요
+        for (const i in arr) {
+            console.log(arr[i]);
+        }
+        console.log
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

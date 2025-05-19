@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        table{
+            border-collapse: collapse;
+            width: 500px;
+            height: 350px;
+            text-align: center;
+            font-weight: bold;
+            background-color: aquamarine;
+            box-shadow: 5px 10px 10px rgba(0,0,0,0.5);
+        }
+        h2{
+            margin-top: 0%;
+        }
+        tr, td {
+            border: 2px solid white;
+        }
+        tr:nth-of-type(even) td:nth-of-type(odd){
+            background-color: bisque;
+        }
+        tr:nth-of-type(odd) td:nth-of-type(even){
+            background-color: bisque;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -12,26 +41,38 @@
         const a = inp;
         const b = inp2%inp;
         const c = (inp2 - b) / inp ;
-    let list = `<table>`
-        for (let i = 0; i < a; i++){
-            list += `<tr>`;
-                for (let j = 0; j < c; j++ ){
-                    if (b == 0) {
-                    list += `<td>좌석 ${(i * c) + j + 1}</td>`;
-                    } else  {
-                        if (j == c) {
-                            list += `<td rowspan="${b}">좌석 ${(i * c) + j + 1}</td>`;
+        const d = c + 1;
+   
+    list = `<table>`;
+        if (b == 0) {
+            for (let i = 0; i < a; i++){
+                list += `<tr>`;
+                for (let j = 0; j < c; j++){
+                    list += `<td>좌석 ${(i * (c)) + j + 1}</td>`;
+                }
+            }
+            list += `</tr>`;
+        } else {
+            for (let i = 0; i < a; i++){
+                list += `<tr>`;
+                for (let j = 0; j < d; j++){
+                    if (i == a - 1) {
+                        if (j >= b){
+                            continue
                         } else {
-                            list += `<td>좌석 ${(i * c) + j + 1}</td>`;
+                            list += `<td>좌석 ${(i * (d)) + j + 1}</td>`;
                         }
+                    } else {
+                        list += `<td>좌석 ${(i * (d)) + j + 1}</td>`;
                     }
                 }
-                list += `</tr>`;
+            }
         }
+        
         list += `</table>`;
-        console.log(a)
-        console.log(b)
-        console.log(c)
+        console.log(a);
+        console.log(b);
+        console.log(c);
         document.body.innerHTML = list;
     </script>
     

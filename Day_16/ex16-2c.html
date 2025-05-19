@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수안에서 let을 쓰게 된다면 함수 밖에선 소멸된다. 이는 const도 같은데 이유는
+        // 함수안에서 사용되는 const랑 let은 지극히 로컬적이기 때문에 그 지역을 벗어나서 안되는것
+        // 호이스팅이 되는 var은 먼저 호출해도 에러가 안남
+        // 호이스팅이 안되는 const, let 먼저 호출하면 에러남
+        // const, let은 스코프를 벗어나면 사라짐, 로컬적임
+        function myscope () {
+            var a = "나는 var에 a입니다.";
+            console.log(a);
+            {
+                var b = "나는 var에 b입니다.";
+                let c = "나는 var에 c입니다.";
+            }
+            console.log(b);
+            console.log(c);
+        }
+        myscope();
+    </script>
+</body>
+</html>

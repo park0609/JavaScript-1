@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let output = "";
+        let inp = "*";
+       
+            for (let i = 1; i < 10; i++){
+                output += "*";
+                console.log(output);
+            }
+            
+        let output2 = "";
+        for (let i = 1; i <6; i++){
+            for (let j = 6; j > i; j--){
+                output2 += " ";
+            }
+            for (k = 0; k < 2 * i -1; k++){
+                output2 += "*";
+            }
+            
+            output2 += "\n";
+        }
+        for (let p = 1; p < 6; p++){
+            for (h = 1; h < 3 + p - 1; h++){
+                output2 += " ";
+            }
+            for (g = 8; g > 2 * p - 1; g--){
+                output2 += "*";
+            }
+            output2 += "\n";
+        }
+        
+        console.log(output2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
