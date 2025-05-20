@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal{
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0,0,0,0.541);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .modal.show{
+            display: flex;
+        }
+    
+        .login{
+            background-color: white;
+            width: 300px;
+            height: 400px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
+            padding: 50px 50px 80px;
+            box-sizing: border-box;
+        }
+        h2{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .modal2{
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0,0,0,0.541);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .alert{
+            background-color: white;
+            width: 420px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
+            box-sizing: border-box;
+            padding: 35px;
+        }
+        .modal2.show{
+            display: flex;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+        input,
+        form > button{
+            box-sizing: border-box;
+            width: 100%;
+            height: 30px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
+        }
+        form > button{
+            background-color: rgba(127, 255, 215, 0.5);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="modal" id="login-open" >
+        <div class="login">
+            <h2>로그인</h2>
+            <form action="#">
+                <input type="text" />
+                <input type="text" />
+                <button type="submit">로그인</button>
+                <button type="submit" onclick="modalOpen()">취소</button>
+            </form>
+        </div>
+    </div>
+    <div id="idmodal2" class="modal2 ">
+        <div class="alert">
+            모달(modal)은 웹 페이지에서 중요한 정보나 사용자 인터랙션을 강조하기 위해 사용하는 UI 요소입니다. 
+            일반적으로 화면 중앙에 위치하며, 배경을 흐리게 처리하여 사용자의 주의를 집중시킵니다. 
+            모달 창은 다양한 용도로 활용될 수 있으며, 로그인 폼, 경고 메시지, 확인 요청, 이미지 갤러리, 설명 창 등에서 자주 사용됩니다.
+            모달은 사용자가 특정 작업을 완료하거나 닫기 버튼을 클릭할 때까지 유지되며, 페이지의 흐름을 방해하지 
+            않으면서도 중요한 정보를 전달하는 역할을 합니다. 또한, 사용자 경험을 고려하여 적절한 크기와 디자인을 적용하는 것이 중요합니다. 
+            지나치게 복잡하거나 닫기가 어려운 모달은 오히려 사용자에게 불편함을 줄 수 있습니다.
+            최근에는 반응형 디자인을 고려하여 모바일 환경에서도 원활하게 작동할 수 있도록 설계하는 것이 중요하며, 
+            접근성을 높이기 위해 키보드 내비게이션이나 스크린 리더 지원을 추가하는 경우도 많습니다. 이런 점들을 고려하면, 
+            모달은 적절히 사용했을 때 매우 효과적인 UI 요소가 될 수 있습니다.
+        </div>
+    </div>
+    <h1>간단한 내용들</h1>
+    <button id="login-btn" onclick="modalOpen()">로그인</button>
+    <button id="alert-btn" >알림</button>
+    <h3>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic eligendi quasi illo ratione quod delectus quis aliquam, iure, modi nemo rem alias maxime ut numquam! Veniam, commodi vero autem fugiat aliquid repudiandae amet fugit alias dolorum vel repellat animi, nisi itaque aperiam ratione! Modi excepturi iusto obcaecati doloremque vel laudantium repellendus reiciendis sequi recusandae architecto quos quam iure, aspernatur dolores ducimus, molestiae necessitatibus facere? Cupiditate voluptate consequuntur atque quo sed similique iure sequi, nihil modi, temporibus, in excepturi quas sunt tenetur commodi? Non cumque suscipit totam quidem consequatur soluta obcaecati natus recusandae voluptate sunt! Cum doloremque veritatis vel totam sint officia eum similique! Repellendus similique, est consectetur iure reprehenderit, delectus magni consequuntur ad reiciendis vel voluptate aspernatur fugit harum nihil nulla commodi cum quos. Voluptas rem harum architecto pariatur dolor, veritatis, voluptatum similique saepe sed amet illum deleniti! Veritatis iure quidem ratione fugit numquam qui rem, quaerat nisi rerum vitae corporis voluptas molestias adipisci similique consequuntur delectus doloribus laudantium totam distinctio ducimus inventore. Distinctio, ullam! Natus a numquam inventore fugiat maxime vero vitae, illo amet laboriosam voluptatibus recusandae dolore pariatur doloremque debitis suscipit ab ipsum harum! Deserunt, ipsa consequatur. Est incidunt provident voluptatum quaerat sapiente unde quis ipsa. Facilis, obcaecati!
+    </h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laborum porro dicta quas provident ad cumque exercitationem. Modi repellat, sint blanditiis consequuntur impedit dignissimos, illum dolorem cum asperiores molestiae harum possimus doloribus delectus iure qui veniam explicabo sed nisi sit. Vel animi laudantium non neque blanditiis cum eveniet placeat odio pariatur libero. Eos alias accusamus id iusto ducimus commodi consequatur aliquid animi nulla nostrum atque aspernatur veniam quibusdam, sint exercitationem explicabo, velit tempore? Aspernatur nihil corrupti numquam suscipit soluta nulla dolore laborum tempore necessitatibus earum aliquid optio, harum, quidem, voluptatum quam quos modi minima cumque aut. Doloremque sed debitis culpa qui porro ducimus minus sapiente laboriosam perferendis nesciunt rerum explicabo earum temporibus quam harum eius, saepe doloribus omnis dicta vel velit aut maiores necessitatibus nobis! Aliquid ratione facilis fugit accusantium id explicabo iure labore atque qui officiis pariatur, esse numquam eaque molestias iste ipsam hic dicta quis sunt nemo aliquam? Ducimus, neque nulla adipisci odio, facere perferendis quia repellat itaque odit nostrum veritatis blanditiis reprehenderit harum quidem placeat explicabo, aliquid enim! Facere ipsa iure minus? Quaerat molestiae ratione eum enim earum? Inventore impedit, illo porro nihil hic quasi obcaecati? Dolorem aut ducimus quasi vero quo qui aliquid ex recusandae explicabo!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quasi, perspiciatis ex accusantium sed doloribus! Est optio quibusdam laudantium doloribus minima, accusamus non facere dicta sequi alias incidunt fugiat fugit omnis. Facilis hic ipsam ullam velit sapiente qui error itaque facere? Blanditiis dolore veritatis quod est nesciunt maiores atque tempora non impedit expedita recusandae, id itaque quia facere possimus? Recusandae vel, sapiente eos blanditiis atque quam dicta accusamus, voluptate mollitia ducimus cupiditate distinctio numquam voluptatibus aperiam ex omnis a temporibus, consectetur odit labore voluptatem similique sunt. Sapiente vitae excepturi cumque nemo in reprehenderit ea optio minima eligendi impedit ratione, unde ab qui, laudantium maiores velit voluptates voluptas atque vel adipisci corrupti quae mollitia necessitatibus! Quas amet quos hic repellendus quaerat nam omnis ducimus velit cum? Inventore tempore perferendis molestiae accusantium deserunt, ea impedit! At, omnis totam obcaecati soluta fugit animi veniam velit hic! Natus voluptatibus tenetur veniam illo molestiae nostrum aut sequi saepe debitis veritatis pariatur omnis quia excepturi numquam laborum, aspernatur a. Optio provident magnam quasi, eius asperiores sapiente eaque, exercitationem amet reprehenderit sunt quia veritatis. Et exercitationem molestias omnis dolore deleniti aspernatur veritatis veniam, ab tenetur delectus nulla nemo similique. Accusamus, veniam ea! Maiores, aliquid! Ab, aspernatur deserunt!
+    </p>
+    <script>
+        const loginOpen = document.querySelector("#login-open");
+        const modalOpen = () => {
+            loginOpen.classList.toggle("show");
+        };
+        const alertBtn = document.querySelector("#alert-btn");
+        const modal2 = document.querySelector("#idmodal2")
+        
+        const modalOn = () => {
+            modal2.classList.toggle("show")
+        }
+        alertBtn.addEventListener("click", modalOn);
+        modal2.addEventListener("click",modalOn)
+    </script>
+</body>
+</html>

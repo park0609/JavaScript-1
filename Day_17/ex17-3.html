@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="count">글자수:0</h1>
+    <textarea 
+    name="" 
+    id="textarea"
+    cols="20"
+    rows="10"
+    maxlength="200"
+    onkeyup="updateText()"
+    >
+</textarea>
+<script>
+    const updateText =()=> {
+        const textArea = document.querySelector("#textarea");
+        const count = document.querySelector("#count");
+        count.textContent = `글자수 : ${textArea.value.length}`;
+        if (textArea.value.length > 100) {
+            alert("100자가 넘었습니다!")
+        }
+    }
+</script>
+</body>
+</html>
