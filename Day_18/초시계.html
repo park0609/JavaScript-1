@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///C:/Users/Admin/Downloads/Telegram%20Desktop/ex18-03d.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #digital {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .clock {
+        position: relative;
+        height: 500px;
+        width: 500px;
+        border-radius: 50%;
+        border: 1px solid #000000;
+        background-color: rgb(149, 230, 149);
+      }
+      #center {
+        position: absolute;
+        left: 250px;
+        top: 250px;
+        width: 1px;
+        height: 1px;
+        border: solid 2px black;
+        border-radius: 50%;
+        z-index: 2;
+      }
+     
+      #sec {
+        position: absolute;
+        top: 50px;
+        left: 250px;
+        width: 2px;
+        height: 200px;
+        border: 1px solid red;
+        border-radius: 3px;
+        background-color: red;
+        transform-origin: bottom;
+      } 
+    </style>
+    </head>
+  <body>
+    <h1>초시계</h1>
+    <div id="digital">00:00:00.00</div>
+    <div class="clock">
+      <div id="hour"></div>
+      <div id="min"></div>
+      <div id="sec" style="transform: rotate(0deg);"></div>
+    </div>
+    <div class="buttons">
+      <button onclick="startTimer()">시작버튼</button>
+      <button onclick="stopTimer()">종료버튼</button>
+      <button onclick="resetTimer()">초기화</button>
+    </div>
+    <script>
+     let startTime = 0;
+     let elapsedTime = 0;
+     let timerId;
+
+     function startTimer() {
+       startTime = Date.now() - elapsedTime;
+       timerId = setInterval(() => {
+         elapsedTime = Date.now() - startTime;
+         console.log(elapsedTime/(1000 * 6)/60);
+         const time = new Date(elapsedTime);
+         const hours = String(time.getUTCHours()).padStart(2, '0');
+         const minutes = String(time.getUTCMinutes()).padStart(2, '0');
+         const seconds = String(time.getUTCSeconds()).padStart(2, '0');
+         const milliseconds = String(time.getUTCMilliseconds()).padStart(3, '0');
+         document.querySelector("#digital").textContent = `${minutes}:${seconds}:${milliseconds}`;
+         document.querySelector("#sec").style.transform = `rotate(${elapsedTime /1000 * 6*60}deg)`;
+       }, 10);
+     }
+     function stopTimer() {
+        clearInterval(timerId);
+        timerId;
+     }
+     function resetTimer() {
+       clearInterval(timerId);
+       elapsedTime = 0;
+       document.querySelector("#digital").textContent = `00:00:00.00`;
+       document.querySelector("#sec").style.transform = `rotate(0deg)`;
+       document.querySelector("#min").style.transform = `rotate(0deg)`;
+     }
+     const fullSeconds = elapsedTime / 1000;
+     const deg = fullSeconds * 360;
+     document.querySelector("#sec").style.transform = `rotate(${deg}deg)`;
+    </script>
+      
+</body></html>

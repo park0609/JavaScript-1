@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr = [11,22,33,44,55,66,77,88,99];
+        // arr.forEach(function(value, index , array){
+        //     console.log(value);
+        //     console.log(index);
+        //     console.log(array);
+        // });
+        const array = []
+        arr.forEach((v,i) => array.push(v * 2));
+        console.log(array);
+    </script>
+</head>
+<body>
+    <!-- 
+    forEach : for in ~~ 순회 위에 찍어보면 배열안에 있는값 인덱스 배열을 순회한다. for문처럼
+    ※주의1※ forEach를 쓸 떈 인자의 값을 무조건 순서대로 넣어야 한다. value, index, array 순서로 index만 쓸려해도 value는 적어줘야함
+    ※주의2※ return을 해도 반환값이 없다
+    map : x -> y(전 후 양이 변하지 않는다.)
+    
+    -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 타이머 응용 재귀함수 사용 */
+        let num = 0;
+        const fn1 = () => setTimeout(() => {
+            document.write(`${++num} 반복중....<br>`);
+            fn1(); // 내부에서 자기를 호출
+        }, 1000);
+    fn1();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

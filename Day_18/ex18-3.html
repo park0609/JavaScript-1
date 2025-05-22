@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pt(name = "없어") {
+            console.log(name + "안녕?")
+        }
+        setTimeout(function() {
+            pt("홍길동");
+        }, 1000);
+
+
+        setTimeout(pt,1000)
+        setTimeout(pt,2000)
+        setTimeout(pt,3000)
+        setTimeout(pt(),3000) // 함수명 뒤에 ()를 붙인건 바로 실행하라는 뜻
+        setTimeout(pt("홍길동"),1000)
+        setTimeout(pt("홍"),2000)
+        setTimeout(pt("길동"),3000)
+        addEventListener("click",pt)
+    </script>
+</head>
+<body>
+    <h1>저는 곧 변합니다.</h1>
+    <script>
+        /*방식 1*/
+    const cg = () => {    
+        const h1 = document.querySelector("h1");
+        h1.textContent = "변했어요";
+    };
+    setTimeout(cg,2000);
+    /*방식 2*/
+    setTimeout(() => document.querySelector("h1").textContent = "변했어요!", 3000);
+
+    /* 방식 3 - 인자넣기 */
+    const cc = (text) => {
+        const h1 = document.querySelector("h1");
+        h1.textContent = text;
+    }
+    setTimeout(() => cc("우와"),4000);
+    setTimeout(() => cc("변했다"),5000);
+    setTimeout(() => cc("드디어"),6000);
+
+    /* 방식 4 - 인자넣기 */
+    setTimeout(cc,7000,"이번엔");
+    setTimeout(cc,8000,"멀로");
+    setTimeout(cc,9000,"변할까");
+    </script>
+</body>
+</html>

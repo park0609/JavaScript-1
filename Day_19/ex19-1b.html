@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <script>
+        const header = document.querySelectorAll(`h1`);
+        const color = ["aquamarine","yellow","dodgeblue","lightgreen","aqua"];
+        console.log(header);
+        header.forEach((header, i) =>{
+        header.textContent = "header";
+        header.style.color = color[i];
+        header.style.backgroundColor = `rgb(${i * 40}, ${0}, ${255})`;
+        header.style.padding = "10px";
+        header.style.fontSize = "4rem";
+    })
+    </script>
+</body>
+</html>

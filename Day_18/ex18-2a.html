@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function lol(heroName, level = 1, callback = fire) {
+            document.write("====================<br>");
+            document.write(`${heroName}님이 ${level}레벨이 되셨습니다.<br>`);
+            document.write("====================<br>");
+            if(level >= 6){
+                document.write(`${heroName}님이 궁극기를 쏩니다.<br>`)
+                callback(level)
+            } else {
+                document.write(`${heroName}님이 평타를 때립니다.<br>`)
+            }
+        }
+        function fire(ff) {
+            for(let i = 1; i < ff+1; i++){
+                document.write(`${ff}레벨이여서 ${i}번째 메테오를 던집니다.<br>`)
+            }
+        }
+        function ice(ii) {
+            for(let i = 1; i < ii+1; i++){
+                document.write(`${ii}레벨이여서 ${i*2}번째 얼음조각을 던집니다.<br>`)
+            }
+        }
+        function slow(tt) {
+            for(let i = tt; i > 0; i--){
+                document.write(`${tt}레벨이여서 대상의 이동속도를 ${i}% 줄입니다.<br>`)
+            }
+        }
+        // lol("럭스",8)
+        lol("아리",8,ice)
+        // lol("럭스",8,slow)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

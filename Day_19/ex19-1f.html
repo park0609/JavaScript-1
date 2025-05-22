@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fn(event){
+            console.log(event);
+            console.log(event.value);
+            console.log(event.target);
+            console.log(event.currentTarget);
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.querySelector("button");
+            btn.addEventListener("click",fn);
+        })
+    </script>
+</head>
+<body>
+    <div class="test">
+        <button><span>테스트용 버튼</span></button>
+    </div>
+</body>
+</html>

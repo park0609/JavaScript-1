@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .time{
+            /* position: relative; */
+            z-index: 1;
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+        .hour{
+            position: absolute;
+            border: 1px solid black;
+            width: 150px;
+            top: 150px;
+            transform: rotate(90deg);
+            transform-origin: 100% 0%;
+        }
+        .min{
+            border: 1px solid black;
+            width: 125px;
+            top: 150px;
+            position: absolute;
+            transform: rotate(90deg);
+            transform-origin: 100% 0%;
+        }
+        .sec{
+            border: 1px solid black;
+            width: 100px;
+            top: 150px;
+            position: absolute;
+            transform: rotate(90deg);
+            transform-origin: 100% 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="time"></div>
+    <div class="hour"></div>
+    <div class="min"></div>
+    <div class="sec"></div>
+</body>
+</html>
