@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 공백없애기
+        const str = "      저는 공백을 가지고 있어요?          ";
+        console.log(str.trim());
+
+
+        const data = "  안  ,  녕  ,  하  ,  세  ,  요  ,  1  ,  2  ,  3  ,  4  ,  5  ";
+        const fixData = data.split(",");
+        const ffixData = fixData.map((v) => v.trim());
+        console.log(ffixData);
+
+        const Data2 = "안.녕.하.세.요"
+        const fixData2 = Data2.split(".");
+        console.log(fixData2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

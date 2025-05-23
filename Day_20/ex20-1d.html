@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 객체를 선언
+        const student = {};
+        student.이름 = "윤인성";
+        student.취미 = "악기";
+        student.장래희망 = "돈많은 백수";
+
+        // 출력
+        console.log(JSON.stringify(student, null, 2));
+
+        const obj = {
+            문서: "접니다.",
+            a : function() {
+                setTimeout(function() {console.log(1, this.문서)},2000); // 얘는 한 단계 위(setTimeout)를 가르키기 때문에 문서를 가져오지 못함
+            },
+            b : function() {
+                setTimeout(() => console.log(2, this.문서),2000); // 얘는 두 단계 위(b : function)를 가르키기 때문에 문서를 가져옴
+            },
+        };
+
+        obj.a();
+        obj.b();
+        console.log(obj.문서);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
