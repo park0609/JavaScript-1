@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=S, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            height: 300vh;
+            color: white;
+        }
+        .place1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            height: 100vh;
+        }
+        .place2{
+            height: 100vh;
+        }
+        .place2-div{
+            color: black;
+            background-color: white;
+            width: 1000px;
+            height: 600px;
+            position: sticky;
+
+        }
+        .pro-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 100px;
+        }
+        .profile-in{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        .picture{
+            background-image: url(./img/face.jpg);
+            width: 200px;
+            height: 250px;
+            border-radius: 50px;
+        }
+        .div-info{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 40px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="place1">
+        <h2>안녕하세요 박세찬입니다</h2>
+        <p>코딩 머 좀 배웠습니다. 비전공자이지만 까짓거 한번 해보죠</p>
+    </section>
+    <section class="place2">
+        <div class="place2-div">
+            <h2 class="pro-title">Profile</h2>
+            <div class="profile-in">
+                <div class="picture"></div>
+                <div class="div-info">
+                    <div>
+                        <div>
+                            <div><img src="./img/icon (1).png" alt=""></div>
+                            <div>
+                                <label for="">이름</label>
+                                <div>박세찬</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div><img src="https://cdg-portfolio.com/_next/static/media/birthdate.5bfe2a95.svg" alt=""></div>
+                            <div>
+                                <label for="">생년월일</label>
+                                <div>1999.09.04</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div><img src="https://cdg-portfolio.com/_next/static/media/location.665eb728.svg" alt=""></div>
+                            <div>
+                                <label for="">주소</label>
+                                <div>창원특례시 의창구 북면</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div><img src="https://cdg-portfolio.com/_next/static/media/location.665eb728.svg" alt=""></div>
+                            <div>
+                                <label for="">전화번호</label>
+                                <div>010-8904-3039</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div><img src="https://cdg-portfolio.com/_next/static/media/email.f8008661.svg" alt=""></div>
+                            <div>
+                                <label for="">이메일</label>
+                                <div>guppy135@naver.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div><img src="https://cdg-portfolio.com/_next/static/media/education.0867cbcb.svg" alt=""></div>
+                            <div>
+                                <label for="">학적</label>
+                                <div>부산외대 일본어융합학부</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="place3">언어</section>
+    <section class="place4">4</section>
+    <section class="place5">5</section>
+</body>
+</html>
