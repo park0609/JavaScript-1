@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            /* width: 100%; */
+            max-width: 320px;
+            border: 2px solid #aaa;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+        .contents{
+            display: flex;
+            transition: 0.5s ease;
+        }
+        .contents img{
+            width: 318px;
+            object-fit: cover;
+            border-right: 2px solid #eee;
+        }
+        #tLeft,
+        #tRight{
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+        #tLeft{
+            background-color: rgba(255, 110, 57, 0);
+            left: 0;
+        }
+        #tRight{
+            background-color: rgba(50, 130, 235, 0);
+            right: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- div.#container>div.contents>img.src*4 -->
+    <div id="container">
+        <div class="contents">
+            <!-- <img src="https://placecats.com/350/200" alt="" />
+            <img src="https://placecats.com/360/200" alt="" />
+            <img src="https://placecats.com/370/200" alt="" />
+            <img src="https://placecats.com/330/200" alt="" />
+            <img src="https://placecats.com/350/200" alt="" />
+            <img src="https://placecats.com/360/200" alt="" />
+            <img src="https://placecats.com/370/200" alt="" />
+            <img src="https://placecats.com/330/200" alt="" /> -->
+        </div>
+        <div id="tLeft"></div>
+        <div id="tRight"></div>
+    </div>
+    
+    <script>
+        const contents = document.querySelector(".contents");
+        
+        for (let i=0; i<10; i++){
+            const img = document.createElement("img");
+            img.src = `https://placecats.com/${300+(i*10)}/210`
+            contents.appendChild(img);
+        }
+
+
+        const img = document.querySelectorAll("img");
+        const btnLeft = document.getElementById("btn-left")
+        const btnRight = document.getElementById("btn-right")
+        const tLeft = document.getElementById("tLeft");
+        const tRight = document.getElementById("tRight");
+
+
+        const positions = [];
+        let imgOn = 0;
+        window.addEventListener("load", () => {
+            let pos = 0;
+            img.forEach((v , i) => {
+                positions.push(pos);
+                pos += v.offsetWidth;
+            });
+            console.log(positions);
+        })
+
+        const sLeft = () => {
+            if (imgOn > 0) {
+                imgOn--;
+                console.log(positions[imgOn]);
+                contents.style.transform = `translateX(-${positions[imgOn]}px)`;
+            }
+        };
+
+        const sRight = () => {
+            if (imgOn < positions.length - 1) {
+                imgOn++;
+                console.log(positions[imgOn]);
+                contents.style.transform = `translateX(-${positions[imgOn]}px)`
+            }
+        };
+
+        const updateBtn = () => {
+            btnLeft.disabled = true;
+            btnRight.disabled = true;
+        };
+        tLeft.addEventListener("click",sLeft);
+        tRight.addEventListener("click",sRight);
+    </script>
+</body>
+</html>

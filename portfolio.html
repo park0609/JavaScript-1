@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=S, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol, ul{
+            list-style: none;
+        }
         body{
             background-color: black;
             display: flex;
@@ -33,7 +40,7 @@
             position: sticky;
 
         }
-        .pro-title {
+        .profile-title {
             text-align: center;
             font-size: 3rem;
             margin-bottom: 100px;
@@ -46,15 +53,18 @@
         }
         .picture{
             background-image: url(./img/face.jpg);
-            width: 200px;
-            height: 250px;
+            width: 220px;
+            height: 280px;
             border-radius: 50px;
+            position: relative;
+            bottom: 50px;
         }
         .div-info{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             gap: 40px;
-            
+            position: relative;
+            bottom: 40px;
         }
         
     </style>
@@ -66,7 +76,7 @@
     </section>
     <section class="place2">
         <div class="place2-div">
-            <h2 class="pro-title">Profile</h2>
+            <h2 class="profile-title">Profile</h2>
             <div class="profile-in">
                 <div class="picture"></div>
                 <div class="div-info">
@@ -124,11 +134,29 @@
                             </div>
                         </div>
                     </div>
+                    <div>
+                        <div>
+                            <div><img src="https://cdg-portfolio.com/_next/static/media/education.0867cbcb.svg" alt=""></div>
+                            <div>
+                                <label for="">Git</label>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="place3">언어</section>
+    <section class="place3">
+        <div>language</div>
+        <div>Python</div>
+        <div>Java</div>
+        <div>HTML</div>
+        <div>CSS3</div>
+        <div>JavaScript</div>
+        <div>Oracle</div>
+        <div>MySQL</div>
+    </section>
     <section class="place4">4</section>
     <section class="place5">5</section>
 </body>

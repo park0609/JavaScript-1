@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            /* width: 100%; */
+            max-width: 320px;
+            border: 2px solid #aaa;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+        .contents{
+            display: flex;
+            transition: 0.5s ease;
+        }
+        .contents img{
+            width: 318px;
+            object-fit: cover;
+            border-right: 2px solid #eee;
+        }
+        .controls{
+            display: flex;
+            justify-content: space-between;
+            width: 320px;
+        }
+        button{
+            background-color: violet;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:disabled{
+            background-color: #5a5656;
+            color: white;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.#container>div.contents>img.src*4 -->
+    <div id="container">
+        <div class="contents">
+            <img src="https://placecats.com/350/200" alt="" />
+            <img src="https://placecats.com/360/200" alt="" />
+            <img src="https://placecats.com/370/200" alt="" />
+            <img src="https://placecats.com/330/200" alt="" />
+        </div>
+    </div>
+    <div class="controls">
+        <button id="btn-left" onclick="sLeft()">이전</button>
+        <button id="btn-right" onclick="sRight()">다음</button>
+    </div>
+    <script>
+        const img = document.querySelectorAll("img");
+        const contents = document.querySelector(".contents");
+        const btnLeft = document.getElementById("btn-left")
+        const btnRight = document.getElementById("btn-right")
+
+        const positions = [];
+        let imgOn = 0;
+        window.addEventListener("load", () => {
+            let pos = 0;
+            img.forEach((v , i) => {
+                positions.push(pos);
+                pos += v.offsetWidth;
+            });
+            console.log(positions);
+        })
+
+        const sLeft = () => {
+            if (imgOn > 0) {
+                imgOn--;
+                console.log(positions[imgOn]);
+                contents.style.transform = `translateX(-${positions[imgOn]}px)`;
+            }
+        };
+
+        const sRight = () => {
+            if (imgOn < positions.length - 1) {
+                imgOn++;
+                console.log(positions[imgOn]);
+                contents.style.transform = `translateX(-${positions[imgOn]}px)`
+            }
+        };
+
+        const updateBtn = () => {
+            btnLeft.disabled = true;
+            btnRight.disabled = true;
+        };
+    </script>
+</body>
+</html>
