@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=S, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
     <style>
         *{
             margin: 0;
             padding: 0;
+            font-family: 'NanumSquareRound';
+            
         }
         ol, ul{
             list-style: none;
@@ -28,9 +31,11 @@
             flex-direction: column;
             text-align: center;
             height: 100vh;
+            min-height: 100vh;
         }
         .place2{
             height: 100vh;
+            min-height: 100vh;
         }
         .place2-div{
             color: black;
@@ -38,12 +43,14 @@
             width: 1000px;
             height: 600px;
             position: sticky;
-
+            box-shadow: 10px 20px 40px rgba(255,255,255,0.5);
         }
         .profile-title {
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 100px;
+            font-size: 65px;
+            position: relative;
+            top: 30px;
+            margin-bottom: 160px;
         }
         .profile-in{
             display: flex;
@@ -52,12 +59,14 @@
             
         }
         .picture{
-            background-image: url(./img/face.jpg);
+            background-image: url(./img/박세찬_이력서사진.jpg);
             width: 220px;
             height: 280px;
             border-radius: 50px;
             position: relative;
             bottom: 50px;
+            background-position: center;
+            background-size: cover;
         }
         .div-info{
             display: grid;
@@ -65,8 +74,31 @@
             gap: 40px;
             position: relative;
             bottom: 40px;
+            font-size: 20px;
         }
-        
+        .div-info-text{
+            display: flex;
+            align-items: center;
+            gap: 20px;    
+        }
+        .place3{
+            display: flex;
+            flex-direction: row;
+        }
+        .place4{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 200px 200px;
+            position: relative;
+            top: 200px;
+            
+        }
+        .place4-info{
+            background-color: white; 
+            width: 400px;
+            height: 400px;
+            color: black;
+        } 
     </style>
 </head>
 <body>
@@ -81,64 +113,64 @@
                 <div class="picture"></div>
                 <div class="div-info">
                     <div>
-                        <div>
-                            <div><img src="./img/icon (1).png" alt=""></div>
+                        <div class="div-info-text">
+                            <div style="margin-bottom: 10px;"><img src="./img/icon (1).png" alt=""></div>
                             <div>
-                                <label for="">이름</label>
+                                <label for="" style="font-weight: bold;" style="margin-bottom: 10px;">이름</label>
                                 <div>박세찬</div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div>
-                            <div><img src="https://cdg-portfolio.com/_next/static/media/birthdate.5bfe2a95.svg" alt=""></div>
+                        <div class="div-info-text">
+                            <div><img src="https://cdg-portfolio.com/_next/static/media/birthdate.5bfe2a95.svg" alt="" ></div>
                             <div>
-                                <label for="">생년월일</label>
+                                <label for="" style="font-weight: bold;">생년월일</label>
                                 <div>1999.09.04</div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div>
+                        <div class="div-info-text">
                             <div><img src="https://cdg-portfolio.com/_next/static/media/location.665eb728.svg" alt=""></div>
                             <div>
-                                <label for="">주소</label>
+                                <label for="" style="font-weight: bold;">주소</label>
                                 <div>창원특례시 의창구 북면</div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div>
+                        <div class="div-info-text">
                             <div><img src="https://cdg-portfolio.com/_next/static/media/location.665eb728.svg" alt=""></div>
                             <div>
-                                <label for="">전화번호</label>
+                                <label for="" style="font-weight: bold;">전화번호</label>
                                 <div>010-8904-3039</div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div>
+                        <div class="div-info-text">
                             <div><img src="https://cdg-portfolio.com/_next/static/media/email.f8008661.svg" alt=""></div>
                             <div>
-                                <label for="">이메일</label>
+                                <label for="" style="font-weight: bold;">이메일</label>
                                 <div>guppy135@naver.com</div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div>
+                        <div class="div-info-text">
                             <div><img src="https://cdg-portfolio.com/_next/static/media/education.0867cbcb.svg" alt=""></div>
                             <div>
-                                <label for="">학적</label>
+                                <label for="" style="font-weight: bold;">학적</label>
                                 <div>부산외대 일본어융합학부</div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div>
+                        <div class="div-info-text">
                             <div><img src="https://cdg-portfolio.com/_next/static/media/education.0867cbcb.svg" alt=""></div>
-                            <div>
-                                <label for="">Git</label>
+                            <div> 
+                                <label for="" style="font-weight: bold;" id="gitAddress">Git</label>
                                 
                             </div>
                         </div>
@@ -148,16 +180,58 @@
         </div>
     </section>
     <section class="place3">
-        <div>language</div>
-        <div>Python</div>
-        <div>Java</div>
-        <div>HTML</div>
-        <div>CSS3</div>
-        <div>JavaScript</div>
-        <div>Oracle</div>
-        <div>MySQL</div>
+        <div class="place3-div">language
+        <div class="place3-div-language">Python</div>
+        <div class="place3-div-language">Java</div>
+        <div class="place3-div-language">HTML</div>
+        <div class="place3-div-language">CSS3</div>
+        <div class="place3-div-language">JavaScript</div>
+        <div class="place3-div-language">Oracle</div>
+        <div class="place3-div-language">MySQL</div>
+        </div>
     </section>
-    <section class="place4">4</section>
-    <section class="place5">5</section>
+    <section class="place4">
+        <div class="place4-info">
+            <div>편의점 상품 관리 및 발주 시스템 개발</div>
+            <div>설명</div>
+            <div>DB와 연결하여 실사용이 가능한 재고관리, 발주, 발주상품을 관리할수있는 시스템을 개발했습니다.</div>
+            <div>개발 툴</div>
+            <div>Phthon, VsCode, QtPy, Oracle, Dbeaver</div>
+            <div>내가 한 것</div>
+            <div>Backend구현, DB설계 및 구축</div>
+        </div>
+        <div class="place4-info">
+            <div>미니 프로젝트 2(미구현)</div>
+        </div>
+        <div class="place4-info">
+            <div>인구 현황으로 스타벅스 지점과의 연관성 분석</div>
+            <div>설명</div>
+            <div>부산광역시 내 스타벅스 지점과 인구현황의 관계를 분석하였습니다.</div>
+            <div>개발툴</div>
+            <div>Jupyter Lab, Python, Oracle, MySQL, Dbeaver</div>
+            <div>내가 한 것</div>
+            <div>Backend구현, DB설계 및 구축</div>
+        </div>
+        <div class="place4-info">
+            <div>텔레그램 챗봇제작</div>
+            <div>설명</div>
+            <div>텔레그램에서 지원하는 챗봇소스를 사용하여 제미나이 AI를 합친 텔레그램 chatBot을 제작하였습니다.</div>
+            <div>개발 틀</div>
+            <div>Jupyter Lab, Python</div>
+            <div>내가 한 것</div>
+            <div>Backend구현</div>
+        </div>
+        <div class="place4-info">
+            <div>사용자 관리 시스템</div>
+            <div>설명</div>
+            <div>사용자 등록, 삭제, 검색 및 정보 수정이 가능한 시스템을 개발했습니다.</div>
+            <div>개발 툴</div>
+            <div>Python, VsCode, Oracle, Dbeaver</div>
+            <div>내가 한 것</div>
+            <div>Backend구현, DB설계 및 구축</div>
+        </div>
+        <div class="place4-info">?</div>
+    </section>
+    <section class="place5"></section>
 </body>
 </html>
