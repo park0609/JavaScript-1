@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script 
+        crossorigin 
+        src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // JSX
+        // 리액트문법 -> 클래스 문법에서 함수형 문법으로 바뀌는 중 = () => {}
+
+        const Content = () => { //컴퍼런트는 대문자로 시작
+            return (
+                <div>    
+                    <h1>반가워요.</h1>
+                    <h2>리액트 연습중이에요.</h2>
+                </div>
+            ); // *return에서 무언갈 내놓을떈 한줄만 사용되야함 예를 들어 h1과 h2를 둘다쓰고 싶은데 그냥 써버리면 문법상 2줄이라 div로 감싸주어 1줄로 변경해야함
+        };
+
+
+
+
+
+
+        ReactDOM.createRoot(document.getElementById("root").render(<Content />));
+    </script>
+</body>
+</html>
