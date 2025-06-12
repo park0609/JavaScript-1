@@ -1,0 +1,23 @@
+.ex7-div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: coral;
+}
+
+
+.ex7-div:hover {
+    background-color: aquamarine;
+}
+
+.ex7-div~ul li {
+    background-color: yellow;
+    color: black;
+}
+
+.ex7ex7 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: bisque;
+}
