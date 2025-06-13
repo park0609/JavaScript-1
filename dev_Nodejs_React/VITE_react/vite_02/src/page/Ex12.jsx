@@ -8,9 +8,9 @@ const Table = () => {
     const handleNum = e => {
         // const index = e.target.id
         // const value = e.target.value
-        const { index, value } = e.target
-        const newEa = [...ea]
-        newEa[index] = value
+        const { id, value } = e.target
+        const newEa = [...ea,]
+        newEa[id] = value
         setEa(newEa)
     }
 
@@ -29,7 +29,7 @@ const Table = () => {
                                         <td>{v.price.toLocaleString('ko-KR')}</td>
                                         <td>{v.category}</td>
                                         <td>{v.delivery_price.toLocaleString('ko-KR')}</td>
-                                        <td><input min="0" type="number" id={i} value={ea[i]} onChange={handleNum} /></td>
+                                        <td><input min="0" type="number" id={i} value={ea[i]} onChange={handleNum} defaultValue={1} /></td>
                                         <td>{v.price * ea[i] + (ea[i] > 0 ? v.delivery_price : 0)}</td>
                                     </tr>
                                 )
@@ -40,7 +40,7 @@ const Table = () => {
                             <td>{data.reduce((ac, v, i) => {
                                 v = (v.price * ea[i]) + (ea[i] > 0 ? v.delivery_price : 0)
                                 return ac + v
-                            })}</td>
+                            }, 0).toLocaleString('ko-KR')}원</td>
                         </tr>
                     </tbody>
                 </table>

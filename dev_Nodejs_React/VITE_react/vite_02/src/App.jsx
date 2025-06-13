@@ -26,6 +26,7 @@ function App() {
       <Link to="/ex12">Table</Link> | {" "}
       <Link to="/ex13">Ball</Link> | {" "}
       <Link to="/ex14">Axi</Link> | {" "}
+      <Link to="/ex_test">test</Link> | {" "}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/ex07' element={<CSS />} />

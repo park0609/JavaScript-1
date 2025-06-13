@@ -3,7 +3,7 @@ import axios from 'axios'
 const url = "https://api.thecatapi.com/v1/images/search?limit=9" // 고양이 사이트
 
 
-const Axi = () => {
+const Test1 = () => {
     const [sdata, setSdata] = useState({ username: " ", password: " " })
     const [mydata, setMydata] = useState('')
     const [odata, setOdata] = useState('')
@@ -51,4 +51,4 @@ const Axi = () => {
         </>
     )
 }
-export default Axi
+export default Test1
